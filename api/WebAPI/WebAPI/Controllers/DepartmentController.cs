@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,10 +17,12 @@ namespace WebAPI.Controllers
     public class DepartmentController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        
-        public DepartmentController(IConfiguration configuration)
+        private readonly ILogger<DepartmentController> _logger;
+
+        public DepartmentController(IConfiguration configuration, ILogger<DepartmentController> logger)
         {
             _configuration = configuration;
+            _logger = logger;
         }
 
         [HttpGet]

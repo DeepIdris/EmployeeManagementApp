@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,11 +20,13 @@ namespace WebAPI.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _env;
+        private readonly ILogger<EmployeeController> _logger;
 
-        public EmployeeController(IConfiguration configuration, IWebHostEnvironment env)
+        public EmployeeController(IConfiguration configuration, IWebHostEnvironment env, ILogger<EmployeeController> logger)
         {
             _configuration = configuration;
             _env = env;
+            _logger = logger;
         }
 
         [HttpGet]
