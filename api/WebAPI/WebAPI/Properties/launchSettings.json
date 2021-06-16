@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:53192",
+      "applicationUrl": "http://localhost:34771",
       "sslPort": 0
     }
   },
@@ -19,6 +19,7 @@
     },
     "WebAPI": {
       "commandName": "Project",
+      "dotnetRunMessages": "true",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "applicationUrl": "http://localhost:5000",
